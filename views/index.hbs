@@ -1,0 +1,120 @@
+{{#each products}}
+<div class="row">
+{{#each this}}
+ <div class="col">
+     <div class="card" >
+  <img src="{{this.imagePath}}" class="card-img-top" alt="mmm">
+  <div class="card-body">
+    <h5 class="card-title">{{this.productName}}</h5>
+    <p class="card-text">Some quick example t.</p>
+   
+   {{#if ../../checkuser}}
+    <a href="/addtocart/{{this._id}}/{{this.price}}/{{this.productName}}" class="btn btn-primary">{{this.price}} LE</a>
+   {{else}}
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  buy
+</button>
+   
+   {{/if}}
+   
+
+    
+  </div>
+</div>
+    </div>
+{{/each}}
+</div>
+{{/each}}
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">-----</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      Please Sign-in or Sign-up So You Can Enjoy Shopping
+      </div>
+      <div class="modal-footer">
+        <a href="/users/signup"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">sign up</button> </a>
+        <a href="/users/signin">  <button type="button" class="btn btn-primary">sign in</button> </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- 
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+     <div class="card" >
+  <img src="/images/mr-sulaiman-9Klq8OYxcbk-unsplash.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Coffe</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+     <div class="card" >
+  <img src="/images/tyler-nix-j3FidswVdQk-unsplash.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Desserts</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+     <div class="card">
+  <img src="/images/nathan-dumlao-V6WUpAOmioc-unsplash.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Breakfast</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col">
+     <div class="card" >
+  <img src="/images/mr-sulaiman-9Klq8OYxcbk-unsplash.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Coffe</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+     <div class="card" >
+  <img src="/images/tyler-nix-j3FidswVdQk-unsplash.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Desserts</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+     <div class="card">
+  <img src="/images/nathan-dumlao-V6WUpAOmioc-unsplash.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Breakfast</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+  </div>
+
+</div>
+ --}}

@@ -1,0 +1,37 @@
+<div style="padding-top: 30px;">
+
+ <table class="table">
+  <thead>
+    <tr class="table-info">
+      <th scope="col">#</th>
+      <th scope="col">Product Name {{this.name}}</th>
+      <th scope="col">Product Quantity</th>
+      <th scope="col">Product Price</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each userCart.selectedProduct as | val index|}}
+    <tr>
+      <th scope="row">{{add @index}}</th>
+      <td > {{val.name}}</td>
+      <div >   <td >  <a href="/increase/{{index}}"><i class="fas fa-plus"style="padding-right: 5px;"></i></a> 
+      {{val.quantity}} 
+      <a href="/decrease/{{index}}"><i class="fas fa-minus" style="padding-left: 5px;"></i></a></td></div>
+   
+      <td >{{val.price}}</td>
+      <td> <a href="/delete/{{index}}"><i class="fas fa-trash"></i></a> </td>
+    </tr>
+    
+      {{/each}}
+        <tr class="table-primary">
+     
+      <td colspan="3"> total price</td>
+      <td colspan="1"> {{userCart.totalPrice}}</td>
+     
+    </tr>
+    
+  </tbody>
+</table>
+
+</div>

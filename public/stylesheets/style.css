@@ -1,0 +1,31 @@
+
+body {
+    background-image: linear-gradient(to left , rgba(72,56,23,255), rgb(78, 78, 61));
+}
+
+.row {
+    padding-top: 50px;
+}
+.card img {
+    max-height: 250px;
+}
+.navbar-brand img {
+ position: absolute;
+ left: 5px;
+ top: 0;
+ max-width: 150px;
+ max-height: 50px;
+}
+a.nav-link {
+    font-weight: bold;
+    color: rgba(72,56,23,255)!important;  
+    font-size: 1.1rem;
+    margin-right: 30px;
+}
+a.dropdown-item {
+    font-weight: bold;
+    color: rgba(72,56,23,255)!important;
+}
+.bg {
+    background-color: rgb(252, 252, 252) !important;
+}
